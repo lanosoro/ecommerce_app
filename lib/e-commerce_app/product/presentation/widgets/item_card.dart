@@ -109,7 +109,7 @@ class _ECItemCardState extends State<ECItemCard> {
                                             height: 4,
                                           ),
                                           Text(
-                                            "\$${prod.price}",
+                                            "Ksh${prod.price}",
                                             style: const TextStyle(
                                                 fontFamily: "Inter",
                                                 fontWeight: FontWeight.w600,

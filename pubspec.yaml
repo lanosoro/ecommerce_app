@@ -4,7 +4,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.2 <3.0.0'
+  sdk: '>=2.18.2 <3.0.0'
 
 dependencies:
   flutter:
@@ -37,6 +37,7 @@ flutter:
      - assets/e_commerce_app/e_commerce_image/
      - assets/e_commerce_app/e_commerce_jsons/
      - .env
+     - assets/icons/
 
   fonts:
      - family: Inter

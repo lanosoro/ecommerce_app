@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/e-commerce_app/cart/data/models/counties_model.dart';
 import 'package:flutter/material.dart';
 import 'package:nigerian_states_and_lga/nigerian_states_and_lga.dart';
 import '../../../data/models/product.dart';
@@ -15,8 +16,8 @@ class ECCheckoutScreen extends StatefulWidget {
 }
 
 class _ECCheckoutScreenState extends State<ECCheckoutScreen> {
-  String stateValue = NigerianStatesAndLGA.allStates[0];
-  String lgaValue = 'Select your LGA';
+  String stateValue = KenyanCounties.allCounties[0];
+  String lgaValue = 'Select your subCounty';
   List<String> statesLga = [];
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _addressController = TextEditingController();
@@ -56,7 +57,7 @@ class _ECCheckoutScreenState extends State<ECCheckoutScreen> {
                             horizontal: 10, vertical: 5),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          "State",
+                          "County",
                           style: TextStyle(
                             fontSize: 15,
                             fontFamily: "Inter",
@@ -79,8 +80,8 @@ class _ECCheckoutScreenState extends State<ECCheckoutScreen> {
                             key: const ValueKey('States'),
                             value: stateValue,
                             isExpanded: true,
-                            hint: const Text('Select a Nigerian state'),
-                            items: NigerianStatesAndLGA.allStates
+                            hint: const Text('Select a Kenyan County'),
+                            items: KenyanCounties.allCounties
                                 .map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
@@ -108,7 +109,7 @@ class _ECCheckoutScreenState extends State<ECCheckoutScreen> {
                         margin: const EdgeInsets.fromLTRB(20, 20, 20, 5),
                         alignment: Alignment.centerLeft,
                         child: const Text(
-                          "L.G.A",
+                          "SubCounty",
                           style: TextStyle(
                             fontSize: 15,
                             fontFamily: "Inter",
@@ -129,7 +130,7 @@ class _ECCheckoutScreenState extends State<ECCheckoutScreen> {
                             key: const ValueKey('Local governments'),
                             value: lgaValue,
                             isExpanded: true,
-                            hint: const Text('Select a Lga'),
+                            hint: const Text('Select a Subcounty'),
                             items: statesLga
                                 .map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(

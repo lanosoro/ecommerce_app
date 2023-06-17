@@ -68,7 +68,7 @@ class _ECDetailWidgetState extends State<ECDetailWidget> {
                     Row(
                       children: [
                         Text(
-                          "\$${widget.product.price}",
+                          "Ksh ${widget.product.price}",
                           style: const TextStyle(
                             fontSize: 18,
                             fontFamily: "Inter",

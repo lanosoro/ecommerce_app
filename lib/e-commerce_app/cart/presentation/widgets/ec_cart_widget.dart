@@ -119,7 +119,7 @@ class _ECCartWidgetState extends State<ECCartWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        "\$${cart.price}",
+                                        "Ksh ${cart.price}",
                                         style: const TextStyle(
                                           fontSize: 14,
                                           fontFamily: "Inter",

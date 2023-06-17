@@ -61,14 +61,39 @@ class _ECommerceHomeScreenState extends State<ECommerceHomeScreen> {
               fontSize: 10),
           selectedItemColor: EcommerceColors.green,
           unselectedItemColor: EcommerceColors.grayText,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          items:[
+            BottomNavigationBarItem( icon: Image.asset(
+              'assets/icons/category.png',
+              width: 30, // set the width of the icon
+              height: 30,
+
+            ), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.favorite_border_outlined), label: "Wishlist"),
+              icon: Image.asset(
+                'assets/icons/account.png',
+                width: 30, // set the width of the icon
+                height: 30, // set the height of the icon
+              ),
+              label: 'account',
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.text_snippet_outlined), label: "History"),
+              icon: Image.asset(
+                'assets/icons/messages.png',
+                width: 30, // set the width of the icon
+                height: 30,
+
+              ),
+              label: 'messages',
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person_3_outlined), label: "Account"),
+              icon: Image.asset(
+                'assets/icons/video.png',
+                width: 30, // set the width of the icon
+                height: 30,
+
+              ),
+              label: 'Video',
+            ),
           ],
         ),
       ),

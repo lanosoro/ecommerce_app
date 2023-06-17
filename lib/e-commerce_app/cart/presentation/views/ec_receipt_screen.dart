@@ -131,7 +131,7 @@ class ECReceiptScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    " \$${(prod.price * prod.quantity).round()}",
+                                    " Ksh ${(prod.price * prod.quantity).round()}",
                                     style: const TextStyle(
                                       fontSize: 16,
                                       fontFamily: "Inter",
@@ -153,13 +153,7 @@ class ECReceiptScreen extends StatelessWidget {
               context,
               const ECommerceHomeScreen(),
             );
-            //This creates a new list object that contains all the elements of context.read<CartCubit>().cartItems, and assigns it to DummyData.orderHistory
-            DummyData.orderHistory = [...context.read<CartCubit>().cartItems];
-            DummyData.name = name;
-            DummyData.address = address;
-            DummyData.state = state;
-            DummyData.lga = lga;
-            DummyData.phone = phone;
+
             //clearing the cart after successful payment
             context.read<CartCubit>().cartItems.clear();
           },
@@ -171,7 +165,35 @@ class ECReceiptScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(4),
                 color: EcommerceColors.green),
             child: const Text(
-              "Go Back To Home",
+              "Lipa Na Mpesa",
+              style: TextStyle(
+                fontSize: 15,
+                fontFamily: "Inter",
+                color: EcommerceColors.white,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            navigatePush(
+              context,
+              const ECommerceHomeScreen(),
+            );
+
+            //clearing the cart after successful payment
+            context.read<CartCubit>().cartItems.clear();
+          },
+          child: Container(
+            height: 45,
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(top: 18),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+                color: EcommerceColors.green),
+            child: const Text(
+              "Lipa Na Equity",
               style: TextStyle(
                 fontSize: 15,
                 fontFamily: "Inter",

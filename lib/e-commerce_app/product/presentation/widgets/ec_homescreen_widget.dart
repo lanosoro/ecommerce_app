@@ -67,7 +67,7 @@ class _ECommerceHomeScreenWidgetState extends State<ECommerceHomeScreenWidget> {
           height: deviceH / 4,
           child: const ImageMarquee(),
         ),
-        const EcommerceCategoryWidget(),
+        // const EcommerceCategoryWidget(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(

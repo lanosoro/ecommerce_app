@@ -40,7 +40,7 @@ class _ECCartScreenState extends State<ECCartScreen> {
                   ),
                 ),
                 Text(
-                  "Lagos Nigeria",
+                  "Westlands",
                   style: TextStyle(
                     fontSize: 12,
                     fontFamily: "Inter",
@@ -70,7 +70,7 @@ class _ECCartScreenState extends State<ECCartScreen> {
                       ),
                     ),
                     Text(
-                      '\$${context.watch<CartCubit>().totalAmount().toString()}',
+                      'Ksh ${context.watch<CartCubit>().totalAmount().toString()}',
                       style: const TextStyle(
                         fontSize: 16,
                         fontFamily: "Inter",

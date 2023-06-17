@@ -67,7 +67,7 @@ class _ECSearchResultState extends State<ECSearchResult> {
                       height: 4,
                     ),
                     Text(
-                      "\$${widget.prod.price}",
+                      "ksh ${widget.prod.price}",
                       style: const TextStyle(
                           fontFamily: "Inter",
                           fontWeight: FontWeight.w600,

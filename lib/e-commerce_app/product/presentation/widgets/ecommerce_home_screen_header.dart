@@ -31,7 +31,7 @@ class EcommerceHomeScreenHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                "Lagos Nigeria",
+                "Nairobi",
                 style: TextStyle(
                     fontFamily: "Inter",
                     fontWeight: FontWeight.w500,

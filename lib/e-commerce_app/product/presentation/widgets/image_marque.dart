@@ -15,10 +15,13 @@ class _ImageMarqueeState extends State<ImageMarquee> {
   final List<String> imageUrls = [
     "assets/e_commerce_app/e_commerce_image/banner1.png",
     "assets/e_commerce_app/e_commerce_image/banner2.png",
-    "assets/e_commerce_app/e_commerce_image/banner3.png"
+    "assets/e_commerce_app/e_commerce_image/banner3.png",
+    "assets/e_commerce_app/e_commerce_image/2.png",
+    "assets/e_commerce_app/e_commerce_image/1.jpg",
+
   ];
   final PageController _pageController = PageController(viewportFraction: 0.9);
-  int _currentPage = 0;
+  int _currentPage = 4;
 
   @override
   void initState() {
@@ -62,8 +65,22 @@ class _ImageMarqueeState extends State<ImageMarquee> {
         controller: _pageController,
         itemCount: imageUrls.length,
         itemBuilder: (BuildContext context, int index) {
-          return Image.asset(
-            imageUrls[index],
+          return ClipRRect(
+            borderRadius: BorderRadius.circular(10.0),
+
+            child: Container(
+              padding: const EdgeInsets.all(10.0),
+
+              width: 200,
+              height: 200,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  imageUrls[index],
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           );
         },
       ),
